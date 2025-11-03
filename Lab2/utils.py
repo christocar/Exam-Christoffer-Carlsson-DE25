@@ -3,7 +3,7 @@ from numbers import Number
 class Utils:
     """
     Validation for numeric numbers in this geometric lab.
-    Made to control that number is positive and non-zero.
+    Made to control that it is a number is positive and non-zero.
     """
     def validate_number(self, value):
         if not isinstance(value, Number):
