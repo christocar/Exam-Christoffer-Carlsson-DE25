@@ -21,6 +21,14 @@ class Shape2D(ABC):
         self._y = y
 
     @property
+    def x(self) -> Number:
+        return self._x
+
+    @property
+    def y(self) -> Number:
+        return self._y
+
+    @property
     @abstractmethod
     def area(self) -> Number:
         """Return the area of the shape (must be implemented by subclass)."""
@@ -44,74 +52,32 @@ class Shape2D(ABC):
         self._y += dy
 
     def __eq__(self, other: object) -> bool:
-        """
-        Check equality between two shapes based on area and perimeter.
-
-        Args:
-            other (object): The other shape to compare with.
-        """
         if not isinstance(other, Shape2D):
             return NotImplemented
         return self.area == other.area and self.perimeter == other.perimeter
     
     def __lt__(self, other: object) -> bool:
-        """
-        Check if this shape is less than another shape based on area.
-
-        Args:
-            other (object): The other shape to compare with.
-        """
         if not isinstance(other, Shape2D):
             return NotImplemented
         return self.area < other.area
     
     def __gt__(self, other: object) -> bool:
-        """
-        Check if this shape is greater than another shape based on area.
-
-        Args:
-            other (object): The other shape to compare with.
-        """
         if not isinstance(other, Shape2D):
             return NotImplemented
         return self.area > other.area
 
     def __le__(self, other: object) -> bool:
-        """
-        Check if this shape is less than or equal to another shape based on area.
-
-        Args:
-            other (object): The other shape to compare with.
-        """
         if not isinstance(other, Shape2D):
             return NotImplemented
         return self.area <= other.area
     
     def __ge__(self, other: object) -> bool:
-        """
-        Check if this shape is greater than or equal to another shape based on area.
-
-        Args:
-            other (object): The other shape to compare with.
-        """
         if not isinstance(other, Shape2D):
             return NotImplemented
         return self.area >= other.area
     
     def __str__(self) -> str:
-        """
-        Return a string representation of the shape.
-
-        Returns:
-            str: A string describing the shape's type, area, and perimeter.
-        """
         return f"{self.__class__.__name__}(area={self.area}, perimeter={self.perimeter})"
     
     def __repr__(self) -> str:
-        """
-        Return a detailed string representation of the shape.
-
-        Returns:
-            str: A string with the class name and its attributes.
-        """
         return f"{self.__class__.__name__}(x={self._x}, y={self._y})"

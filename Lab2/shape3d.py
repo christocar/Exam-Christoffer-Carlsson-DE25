@@ -35,87 +35,38 @@ class Shape3D(ABC):
         pass
 
     def translate(self, dx: Number, dy: Number, dz: Number) -> None:
-        """
-        Translate the shape by given offsets.
-
-        Args:
-            dx (float | int): The offset in the x-direction.
-            dy (float | int): The offset in the y-direction.
-            dz (float | int): The offset in the z-direction.
-        """
+        """Translate the shape by given offsets."""
         self._x += dx
         self._y += dy
         self._z += dz
 
     def __eq__(self, other: object) -> bool:
-        """
-        Check equality between two shapes based on volume and surface area.
-
-        Args:
-            other (object): The other shape to compare with.
-        """
         if not isinstance(other, Shape3D):
             return NotImplemented
         return self.volume == other.volume and self.surface_area == other.surface_area
     
     def __lt__(self, other: object) -> bool:
-        """
-        Check if this shape is less than another shape based on volume.
-
-        Args:
-            other (object): The other shape to compare with.
-        """
         if not isinstance(other, Shape3D):
             return NotImplemented
         return self.volume < other.volume
     
     def __gt__(self, other: object) -> bool:
-        """
-        Check if this shape is greater than another shape based on volume.
-
-        Args:
-            other (object): The other shape to compare with.
-        """
         if not isinstance(other, Shape3D):
             return NotImplemented
         return self.volume > other.volume
     
     def __le__(self, other: object) -> bool:
-        """
-        Check if this shape is less than or equal to another shape based on volume.
-
-        Args:
-            other (object): The other shape to compare with.
-        """
         if not isinstance(other, Shape3D):
             return NotImplemented
         return self.volume <= other.volume
 
     def __ge__(self, other: object) -> bool:
-        """
-        Check if this shape is greater than or equal to another shape based on volume.
-
-        Args:
-            other (object): The other shape to compare with.
-        """
         if not isinstance(other, Shape3D):
             return NotImplemented
         return self.volume >= other.volume
 
     def __str__(self) -> str:
-        """
-        Return a string representation of the shape.
-
-        Returns:
-            str: A string describing the shape's type, volume, and surface area.
-        """
         return f"{self.__class__.__name__}(volume={self.volume}, surface_area={self.surface_area})"
 
     def __repr__(self) -> str:
-        """
-        Return a detailed string representation of the shape.
-
-        Returns:
-            str: A string with the class name and its attributes.
-        """
         return f"{self.__class__.__name__}(x={self._x}, y={self._y}, z={self._z})"
