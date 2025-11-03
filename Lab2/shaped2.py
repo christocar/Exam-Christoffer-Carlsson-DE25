@@ -9,7 +9,7 @@ class Shape2D(ABC):
     methods for calculating area and perimeter. Translation method is also provided.
     """
 
-    def __init__(self, x: float, y: float):
+    def __init__(self, x: Number, y: Number):
         """
         Initialize a 2D shape with x and y coordinates.
 
@@ -32,7 +32,7 @@ class Shape2D(ABC):
         """Return the perimeter of the shape (must be implemented by subclass)."""
         pass
 
-    def translate(self, dx: float, dy: float) -> None:
+    def translate(self, dx: Number, dy: Number) -> None:
         """
         Translate the shape by given offsets.
 
