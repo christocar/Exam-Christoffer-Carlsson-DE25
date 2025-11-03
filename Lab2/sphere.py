@@ -1,6 +1,6 @@
 from numbers import Number
 from math import pi
-from shape2d import Shape2D
+from shape3d import Shape3D
 from utils import Utils
 
 class Sphere(Shape3D):
