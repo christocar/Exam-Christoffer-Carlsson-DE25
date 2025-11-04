@@ -22,6 +22,12 @@ class TestCircle(unittest.TestCase):
         self.assertEqual(c.x, 2)
         self.assertEqual(c.y, 3)
 
+    def test_invalid_input(self):
+        with self.assertRaises(ValueError):
+            Circle(-1)
+        with self.assertRaises(TypeError):
+            Circle("a")
+
     def test_area(self):
         c = Circle(3)
         self.assertAlmostEqual(c.area, pi * 9, places=9)

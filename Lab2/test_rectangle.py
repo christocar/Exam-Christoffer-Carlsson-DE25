@@ -11,6 +11,12 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r.x, 2)
         self.assertEqual(r.y, -3)
 
+    def test_invalid_input(self):
+        with self.assertRaises(ValueError):
+            Rectangle(-1, 5)
+        with self.assertRaises(TypeError):
+            Rectangle("a", 5)
+
     def test_area(self):
         r = Rectangle(3, 5)
         self.assertEqual(r.area, 15)

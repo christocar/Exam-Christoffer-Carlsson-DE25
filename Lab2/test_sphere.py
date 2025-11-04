@@ -10,6 +10,12 @@ class TestSphere(unittest.TestCase):
         self.assertEqual(s._y, -3)
         self.assertEqual(s._z, 7)
 
+    def test_invalid_input(self):
+        with self.assertRaises(ValueError):
+            Sphere(-1)
+        with self.assertRaises(TypeError):
+            Sphere("a")
+
     def test_surface_area(self):
         s = Sphere(3)
         expected = 4 * pi * (3 ** 2)
