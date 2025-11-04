@@ -1,7 +1,11 @@
 # Geometry OOP Project
 
 ## Overview
-This project is an object-oriented Python application designed to model and visualize 2D and 3D geometric shapes. It allows the user to:
+This project is an object-oriented Python application designed to model both 2D and 3D geometric shapes.
+Only 2D shapes (circles and rectangles) can be plotted/visualized.
+3D shapes (cubes and spheres) can still be created, moved, compared etc, but are not visualized.
+
+ It allows the user to:
 - Create and manage shapes such as **circles**, **rectangles**, **cubes**, and **spheres**
 - Calculate **area**, **perimeter**, and **volume**
 - **Translate (move)** shapes in space
