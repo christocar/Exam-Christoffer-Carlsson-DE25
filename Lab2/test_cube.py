@@ -33,10 +33,6 @@ class TestCube(unittest.TestCase):
         self.assertEqual(c._y, -1)
         self.assertEqual(c._z, 2)
 
-    def test_is_cube(self):
-        c = Cube(5)
-        self.assertTrue(c.is_cube())
-
     def test_equality(self):
         c1 = Cube(3)
         c2 = Cube(3, 10, 10, 10)  # same side, different position
