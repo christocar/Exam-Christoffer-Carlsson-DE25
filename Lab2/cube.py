@@ -29,9 +29,6 @@ class Cube(Shape3D):
         """Return the volume of the cube."""
         return self._side ** 3
 
-    def is_cube(self) -> bool:
-        return True
-
     def translate(self, dx: Number, dy: Number, dz: Number) -> None:
         super().translate(dx, dy, dz)
 
