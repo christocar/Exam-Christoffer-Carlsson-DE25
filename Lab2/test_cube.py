@@ -1,3 +1,17 @@
+"""
+Unit tests for Cube.
+
+This test suite verifies that the Cube class behaves correctly and fulfills
+the requirements of the Shape3D contract.
+
+Tests included:
+- initialization and value validation
+- volume and surface area calculations
+- translation of x/y/z position
+- comparison operators (>, <, ==, >=, <=) based on volume
+- string representations (__str__ and __repr__)
+"""
+
 import unittest
 from cube import Cube
 

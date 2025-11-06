@@ -14,9 +14,9 @@ class Shape3D(ABC):
         Initialize a 3D shape with x, y, and z coordinates.
 
         Args:
-            x (float): The x-coordinate of the shape.
-            y (float): The y-coordinate of the shape.
-            z (float): The z-coordinate of the shape.
+            x (Number): The x-coordinate of the shape.
+            y (Number): The y-coordinate of the shape.
+            z (Number): The z-coordinate of the shape.
         """
         self._x = x
         self._y = y
@@ -35,7 +35,14 @@ class Shape3D(ABC):
         pass
 
     def translate(self, dx: Number, dy: Number, dz: Number) -> None:
-        """Translate the shape by given offsets."""
+        """
+        Translate the shape by given numeric offsets.
+
+        Args:
+            dx (Number): Offset in the x-direction.
+            dy (Number): Offset in the y-direction.
+            dz (Number): Offset in the z-direction.
+        """
         self._x += dx
         self._y += dy
         self._z += dz

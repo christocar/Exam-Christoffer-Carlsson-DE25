@@ -15,10 +15,10 @@ class Rectangle(Shape2D):
         Initialize a Rectangle with given width, height and coordinates.
 
         Args:
-            width (float | int): The width of the rectangle.
-            height (float | int): The height of the rectangle.
-            x (float | int, optional): The x-coordinate of the rectangle. Defaults to 0.
-            y (float | int, optional): The y-coordinate of the rectangle. Defaults to 0.
+            width (Number): The width of the rectangle.
+            height (Number): The height of the rectangle.
+            x (Number, optional): The x-coordinate of the rectangle. Defaults to 0.
+            y (Number, optional): The y-coordinate of the rectangle. Defaults to 0.
         """
         Utils.validate_positive(width)
         Utils.validate_positive(height)
@@ -51,7 +51,13 @@ class Rectangle(Shape2D):
         return self._width == self._height
 
     def translate(self, dx: Number, dy: Number) -> None:
-        """Translate the rectangle by given offsets."""
+        """
+        Translate the rectangle by given numeric offsets.
+
+        Args:
+            dx (Number): Offset in the x-direction.
+            dy (Number): Offset in the y-direction.
+        """
         super().translate(dx, dy)
 
     def __str__(self) -> str:

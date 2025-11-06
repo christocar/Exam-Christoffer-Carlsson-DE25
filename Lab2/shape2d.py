@@ -14,8 +14,8 @@ class Shape2D(ABC):
         Initialize a 2D shape with x and y coordinates.
 
         Args:
-            x (float): The x-coordinate of the shape.
-            y (float): The y-coordinate of the shape.
+            x (Number): The x-coordinate of the shape.
+            y (Number): The y-coordinate of the shape.
         """
         self._x = x
         self._y = y
@@ -42,11 +42,11 @@ class Shape2D(ABC):
 
     def translate(self, dx: Number, dy: Number) -> None:
         """
-        Translate the shape by given offsets.
+        Translate the shape by given numeric offsets.
 
         Args:
-            dx (float | int): The offset in the x-direction.
-            dy (float | int): The offset in the y-direction.
+            dx (Number): Offset in the x-direction.
+            dy (Number): Offset in the y-direction.
         """
         self._x += dx
         self._y += dy

@@ -16,9 +16,9 @@ class Circle(Shape2D):
         Initialize a Circle with given radius and coordinates.
 
         Args:
-            radius (float | int): The radius of the circle.
-            x (float | int, optional): The x-position of the circle. Defaults to 0.
-            y (float | int, optional): The y-position of the circle. Defaults to 0.
+            radius (Number): The radius of the circle.
+            x (Number, optional): The x-position of the circle. Defaults to 0.
+            y (Number, optional): The y-position of the circle. Defaults to 0.
         """
         Utils.validate_positive(radius)
         super().__init__(x, y)
@@ -44,7 +44,13 @@ class Circle(Shape2D):
         return self._radius == 1
 
     def translate(self, dx: Number, dy: Number) -> None:
-        """Translate the circle by given offsets."""
+        """
+        Translate the circle by given numeric offsets.
+
+        Args:
+            dx (Number): Offset in the x-direction.
+            dy (Number): Offset in the y-direction.
+        """
         super().translate(dx, dy)
 
     def __str__(self) -> str:

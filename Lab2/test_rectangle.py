@@ -1,3 +1,18 @@
+"""
+Unit tests for Rectangle.
+
+This test suite verifies that the Rectangle class behaves correctly and fulfills
+the requirements of the Shape2D contract.
+
+Tests included:
+- initialization and value validation
+- area and perimeter calculations
+- translation of x/y position
+- square check (width == height)
+- comparison operators (>, <, ==, >=, <=) based on area
+- string representations (__str__ and __repr__)
+"""
+
 import unittest
 from rectangle import Rectangle
 

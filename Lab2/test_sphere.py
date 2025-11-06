@@ -1,3 +1,18 @@
+"""
+Unit tests for Sphere.
+
+This test suite verifies that the Sphere class behaves correctly and fulfills
+the requirements of the Shape3D contract.
+
+Tests included:
+- initialization and value validation
+- volume and surface area calculations
+- translation of x/y/z position
+- unit sphere check (radius == 1)
+- comparison operators (>, <, ==, >=, <=) based on volume
+- string representations (__str__ and __repr__)
+"""
+
 import unittest
 from math import pi
 from sphere import Sphere
